@@ -68,7 +68,7 @@ func getCounts(t *tracker, tags ...string) int {
 	if len(tags) == 0 {
 		return t.count
 	}
-	next, _ := t.tree[tags[0]]
+	next := t.tree[tags[0]]
 	return getCounts(next, tags[1:]...)
 }
 
